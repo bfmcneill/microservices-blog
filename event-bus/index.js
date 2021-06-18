@@ -1,10 +1,9 @@
 const { randomBytes } = require("crypto");
 const express = require("express");
+const axios = require("axios");
 
 const app = express();
 app.use(express.json());
-
-const posts = {};
 
 app.post("/events", async (req, res) => {
   const event = req.body;
@@ -15,6 +14,7 @@ app.post("/events", async (req, res) => {
     res.send({ status: "ok" });
   } catch (e) {
     console.log(e);
+    res.status(404).send({ error: "axios error" });
   }
 });
 
