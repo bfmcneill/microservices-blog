@@ -19,7 +19,7 @@ function CommentList({ postId }) {
     fetchData();
   }, []);
 
-  const renderedComments = Object.values(comments).map((comment) => {
+  const renderedComments = comments.map((comment) => {
     return <li key={comment.id}>{comment.content}</li>;
   });
 
