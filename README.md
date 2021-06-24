@@ -1,5 +1,15 @@
 # Microservice Blog
 
+## Setup
+
+- install docker
+- install kubernetes
+- setup skaffold
+
+## run it!
+
+- `skaffold dev`
+
 ## Change hosts file to posts.com >> 127.0.0.1
 
 - [On windows 10](https://www.liquidweb.com/kb/edit-host-file-windows-10/)
